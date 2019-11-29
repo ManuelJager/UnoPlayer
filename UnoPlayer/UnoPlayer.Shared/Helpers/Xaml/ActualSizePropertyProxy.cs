@@ -9,7 +9,7 @@ namespace UnoPlayer.Shared.Helpers.Xaml
 {
     public class ActualSizePropertyProxy : FrameworkElement, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public new event PropertyChangedEventHandler PropertyChanged;
 
         public FrameworkElement Element
         {

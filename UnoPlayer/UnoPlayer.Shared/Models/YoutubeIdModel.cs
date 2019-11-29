@@ -6,7 +6,6 @@ namespace UnoPlayer.Shared.Models
 {
     /// <summary>
     /// provides a wrapper for a youtube video id
-    /// this is preferred over just a string because of safety
     /// </summary>
     public struct YoutubeIdModel
     {
