@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6279c845-92f8-4333-ab99-3d213163593c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>UnoPlayer.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\FfmpegConversionException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\NullStreamInfoSetException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\UrlNotFoundException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Xaml\ActualSizePropertyProxy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SongModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\YoutubeIdModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Src\Downloader.DownloadTaskArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Src\Downloader.Utilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Src\FileManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Src\Downloader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Src\ProgressReporters\DebugProgressReporter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Src\ProgressReporters\InlineConsoleProgressReporter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\MainPage\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\StoreLogo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\UPFinalx300.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\UPFinalx300Logo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\UPFinalx300LogoTrans.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\UPFinalx300Trans.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\MainPage\" />
+  </ItemGroup>
+</Project>
