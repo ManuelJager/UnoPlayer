@@ -5,13 +5,59 @@
     xmlns:local="using:UnoPlayer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:helper="using:UnoPlayer.Helpers"
+    xmlns:c="using:Windows.UI.Xaml.Data"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            
-        </Grid.ColumnDefinitions>
-        
-        
+    <Grid 
+        x:Name="root"
+        Background="{ThemeResource SystemControlAltMediumLowAcrylicWindowMediumBrush}">
+        <Grid.Resources>
+            <helper:ActualSizePropertyProxyHeader x:Name="RootGridActualSizeProxyHeader" Element="{Binding ElementName=root}" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid
+            Grid.Row="0"
+            x:Name="header"
+            Background="{ThemeResource SystemBaseLowColor}"
+            VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="900" MaxWidth="{Binding ElementName=RootGridActualSizeProxyHeader, Path=ActualWidthValue}"/>
+                <ColumnDefinition Width="1*" MinWidth="60"/>
+            </Grid.ColumnDefinitions>
+            <Grid 
+                Grid.Column="1"
+                Margin="10,0,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+                <TextBox
+                    Name="search_box"
+                    Grid.Column="0"
+                    FontFamily="Arial"
+                    Padding="5"
+                    FontSize="28"
+                    PlaceholderText="Search"
+                    VerticalAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    BorderThickness="0"
+                    Height="40" 
+                    Background="{x:Null}"/>
+                <Button
+                    Name="search_button"
+                    Grid.Column="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    Height="40"
+                    Padding="0">
+                </Button>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\FfmpegConversionException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\NullStreamInfoSetException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\UrlNotFoundException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Xaml\ActualSizePropertyProxyHeader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Xaml\ActualSizePropertyProxy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SongModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\YoutubeIdModel.cs" />

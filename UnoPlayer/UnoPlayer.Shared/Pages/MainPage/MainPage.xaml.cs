@@ -26,7 +26,7 @@ namespace UnoPlayer
         {
             InitializeComponent();
 
-            DownloadTest();
+            // DownloadTest();
 
             // FileTest();
         }

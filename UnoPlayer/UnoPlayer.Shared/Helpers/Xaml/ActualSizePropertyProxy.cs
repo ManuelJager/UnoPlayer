@@ -5,11 +5,11 @@ using System.Text;
 using System.ComponentModel;
 using Windows.UI.Xaml;
 
-namespace UnoPlayer.Shared.Helpers.Xaml
+namespace UnoPlayer.Helpers
 {
     public class ActualSizePropertyProxy : FrameworkElement, INotifyPropertyChanged
     {
-        public new event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public FrameworkElement Element
         {
